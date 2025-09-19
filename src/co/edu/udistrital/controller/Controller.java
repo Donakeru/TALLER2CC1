@@ -8,6 +8,13 @@ public class Controller {
 
 		MainView window = new MainView(); // Crea el objeto de la ventana principal
 		window.initialize();
+		
+		
+		
+		
+		
+		
+		
 
 	}
 
