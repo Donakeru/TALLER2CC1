@@ -6,17 +6,18 @@ import java.util.Random;
 public class GeneradorDatosRandom {
 	
 	private String[] listaOficios;
-	private ListaDatos oficios;
+	private Datos oficios = new Datos();
 	
 	public GeneradorDatosRandom() {
-		listaOficios = oficios.getOFICIOS();
+		this.listaOficios = oficios.getOFICIOS();
 	}
 	
-	private Pastor[] generarDatos(int n, int m, Random rnd) {
+	public Pastor[] generarDatos(int n, int m, Random rnd) {
 		Pastor[] pastores = new Pastor[n];
 		for (int i = 0; i < n; i++) {
-			int dinero = 1 + rnd.nextInt(i, m);
-			int seguidores = 1 + rnd.nextInt(1,m);
+			int dinero = rnd.nextInt(1, m + 1);     
+			int seguidores = rnd.nextInt(1, m + 1);  
+
 
 
 			String oficio = listaOficios[rnd.nextInt(listaOficios.length)];

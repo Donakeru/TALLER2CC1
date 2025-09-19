@@ -9,7 +9,7 @@ public class Pastor {
 	public Pastor(String oficio, int dinero, int seguidores) {
 		this.oficio = oficio;
 		this.dinero = dinero;
-		this.seguidores = dinero;
+		this.seguidores = seguidores;
 	}
 	
 	
@@ -38,6 +38,15 @@ public class Pastor {
 
 	public void setSeguidores(int seguidores) {
 		this.seguidores = seguidores;
+	}
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "Pastor [oficio=" + oficio + ", dinero=" + dinero + ", seguidores=" + seguidores + "]";
 	}
 	
 	
