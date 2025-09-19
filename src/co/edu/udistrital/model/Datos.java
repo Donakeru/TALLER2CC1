@@ -4,6 +4,7 @@ public class Datos {
 
     private static String[] OFICIOS = {
         //Lista generada gracias a chatgpt
+    	"burlarse del real madrid",
         "apacentar ovejas",
         "ordeñar ovejas",
         "esquilar lana",
