@@ -1,4 +1,4 @@
-# TALLER2 CIENCIAS DE LA COMPUTACIÓN 1
+# TALLER 2 - CIENCIAS DE LA COMPUTACIÓN 1
 
 DANIEL ALEJANDRO CHAVEZ BUSTOS - 20212020109
 ALEJANDRO - 20
@@ -13,20 +13,22 @@ Guárdese, empero, una severa cortesía de vecindad: puede un pastor tener por s
 
 ### REQUERIMIENTOS RECUPERADOS (con psobiles cambios)
 
+(INDISPENSABLE: MVC)
+
 1) **Estructura de datos:**
-    - Se debe crear una lista circular doblemente enlazada, donde cada nodo representa a un pastor.
-    - Cada pastor tiene como atributos al menos:
+    - Se debe crear una lista circular doblemente enlazada, donde cada nodo representa a un pastor. **OK**
+    - Cada pastor tiene como atributos al menos: **OK**
         - caudal (dinero o doblones en sus arcas).
         - feligreses (cantidad de fieles que lo siguen).
-        - ocupacion. (ENUM)?
+        - ocupacion. (se realiza con una clase que funcionará como un directorio de ocupaciones)
     - Pila LIFO
 
 2) **Inicialización:**
-    - Los pastores se ubican en la lista de forma aleatoria (como quien mezcla naipes).
-    - La lista debe mantener la circularidad: el último apunta al primero y viceversa.
+    - Los pastores se ubican en la lista de forma aleatoria (como quien mezcla naipes). **OK**
+    - La lista debe mantener la circularidad: el último apunta al primero y viceversa. **OK**
 
 3) **Selección inicial del turno:**
-    - El primer pastor en actuar es aquel con mayor caudal.
+    - El primer pastor en actuar es aquel con mayor caudal. **OK**
 
 4) **Mecánica del turno:**
     - El pastor en turno decide (al azar o por regla) mirar hacia la izquierda o hacia la derecha.

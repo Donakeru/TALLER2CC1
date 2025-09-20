@@ -16,6 +16,7 @@ public class MainView {
     }
 
     private void initialize() {
+
         frame = new JFrame("Círculo dividido");
         frame.setBounds(10, 10, 1280, 720);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -43,15 +44,7 @@ public class MainView {
         btnEmpezarButton.setBounds(1123, 127, 89, 23);
         drawPanel.add(btnEmpezarButton);
         
-        
-        
-        
-        
-        
         frame.setVisible(true);
-        
-        
-        
     }
 
     public JFrame getFrame() {

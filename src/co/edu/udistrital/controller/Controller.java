@@ -1,20 +1,19 @@
 package co.edu.udistrital.controller;
 
-import java.util.Random;
-
 import javax.swing.JOptionPane;
 
 import co.edu.udistrital.model.*;
 import co.edu.udistrital.view.MainView;
 
 public class Controller {
+
 	private MainView view;
-	private GeneradorDatosRandom generador;
+	private GeneradorPastores generador;
 	private ListaCircular listaPastores;
 
 	public Controller(MainView view) {
 		this.view = view;
-		this.generador = new GeneradorDatosRandom();
+		this.generador = new GeneradorPastores();
 		this.listaPastores = new ListaCircular();
 
 		initController();
@@ -27,20 +26,18 @@ public class Controller {
 
 	private void generarPastores() {
 		try {
-			int n = Integer.parseInt(view.getTextField().getText());
-			Random ran = new Random();
-
-			Pastor[] pastores = generador.generarDatos(n, 100, ran);
 
 			listaPastores = new ListaCircular();
-			for (Pastor p : pastores) {
-				listaPastores.agregar(p);
+			int cantidadPastores = Integer.parseInt(view.getTextField().getText());
+
+			for (int i = 0; i < cantidadPastores; i++) {
+				listaPastores.agregar(this.generador.generar());	
 			}
 
 			System.out.println("Lista circular generada:");
 			listaPastores.mostrar();
 
-			view.getDrawPanel().setPartes(n);
+			view.getDrawPanel().setPartes(cantidadPastores);
 			view.getDrawPanel().colocarPastores(listaPastores);
 
 		} catch (NumberFormatException ex) {
@@ -70,7 +67,7 @@ public class Controller {
 		JOptionPane.showMessageDialog(view.getFrame(), // esto se cambiará a que al empezar el pastor se marque en el
 														// circulo, para poder verlo mejor
 				"El pastor con más dinero es:\n" + "Oficio: " + mejorPastor.getOficio() + "\n" + "Dinero: "
-						+ mejorPastor.getDinero() + "\n" + "Seguidores: " + mejorPastor.getSeguidores());
+						+ mejorPastor.getDinero() + "\n" + "Feligreces: " + mejorPastor.getFeligreces());
 
 	}
 }

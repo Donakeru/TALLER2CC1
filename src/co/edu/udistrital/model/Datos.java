@@ -2,7 +2,7 @@ package co.edu.udistrital.model;
 
 public class Datos {
 
-    private static String[] OFICIOS = {
+    public static final String[] OFICIOS = {
         //Lista generada gracias a chatgpt
     	"burlarse del real madrid",
         "apacentar ovejas",
@@ -32,7 +32,6 @@ public class Datos {
         "organizar caravana",
         "vigilar campamento",
         "hacer guardia nocturna",
-        
         "negociar lana",
         "vender leche",
         "hacer queso",
@@ -54,7 +53,6 @@ public class Datos {
         "hacer ponchos",
         "hacer alfombras",
         "hacer tapices",
-        
         "construir chozas",
         "reparar chozas",
         "fabricar adobes",
@@ -69,7 +67,6 @@ public class Datos {
         "preparar trampas",
         "construir balsas",
         "reparar puentes",
-        
         "preparar pan",
         "recolectar leña",
         "encender hogueras",
@@ -87,7 +84,6 @@ public class Datos {
         "cultivar trigo",
         "cosechar cebada",
         "molinar trigo",
-        
         "vigilar montañas",
         "vigilar valles",
         "vigilar ríos",
@@ -102,7 +98,6 @@ public class Datos {
         "vigilar bandoleros",
         "vigilar caminos",
         "vigilar cañadas",
-        
         "cantar canciones",
         "contar cuentos",
         "tocar cuerno",
@@ -115,7 +110,6 @@ public class Datos {
         "organizar fiestas",
         "narrar leyendas",
         "componer poemas",
-        
         "enseñar oraciones",
         "rezar por lluvias",
         "rezar por cosechas",
@@ -126,7 +120,6 @@ public class Datos {
         "acompañar enfermos",
         "cuidar ancianos",
         "ser guía espiritual",
-        
         "buscar plantas medicinales",
         "curar heridas",
         "hacer pomadas",
@@ -135,7 +128,6 @@ public class Datos {
         "vigilar partos de animales",
         "dar primeros auxilios",
         "hacer masajes",
-        
         "cazar conejos",
         "cazar liebres",
         "cazar zorros",
@@ -143,7 +135,6 @@ public class Datos {
         "pescar truchas",
         "pescar bagres",
         "cuidar trampas de pesca",
-        
         "enseñar a niños pastoreo",
         "enseñar a niños canciones",
         "contar historias del campo",
@@ -154,14 +145,12 @@ public class Datos {
         "mostrar caminos",
         "llevar mensajes",
         "ser correo rural",
-        
         "contar estrellas",
         "vigilar luna",
         "marcar estaciones",
         "medir sombras",
         "predecir eclipses",
         "usar calendario lunar",
-        
         "cuidar cabras",
         "cuidar vacas",
         "guiar mulas",
@@ -172,7 +161,6 @@ public class Datos {
         "vigilar pavos",
         "cuidar perros",
         "cuidar gatos del establo",
-        
         "cuidar sementeras",
         "ahuyentar aves",
         "vigilar espantapájaros",
@@ -255,8 +243,6 @@ public class Datos {
         "relatar historias sagradas"
     };
 
-	public String[] getOFICIOS() {
-		return OFICIOS;
-	}
+    private Datos(){};
 
 }
