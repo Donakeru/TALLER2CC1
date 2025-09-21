@@ -34,9 +34,5 @@ public class PilaDesposeidos {
     	return this.cabeza==null;
     }
     
-    public Pastor cima() {
-    	return this.cabeza == null ? null : this.cabeza.getPastor();
-    }
-    
     
 }

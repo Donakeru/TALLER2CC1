@@ -7,7 +7,7 @@ public class GeneradorPastores {
 
 	private Random rnd;
 	private final int CANTIDAD_LIMITE_INFERIOR = 1;
-	private final int CANTIDAD_LIMITE_SUPERIOR = 100;
+	private final int CANTIDAD_LIMITE_SUPERIOR = 150;
 	
 	public GeneradorPastores() {
 

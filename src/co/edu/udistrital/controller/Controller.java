@@ -3,7 +3,12 @@ package co.edu.udistrital.controller;
 import java.util.Random;
 
 import javax.swing.JOptionPane;
-import co.edu.udistrital.model.*;
+
+import co.edu.udistrital.model.GeneradorPastores;
+import co.edu.udistrital.model.ListaCircular;
+import co.edu.udistrital.model.Nodo;
+import co.edu.udistrital.model.Pastor;
+import co.edu.udistrital.model.PilaDesposeidos;
 import co.edu.udistrital.view.MainView;
 
 public class Controller {
@@ -86,7 +91,7 @@ public class Controller {
 		boolean sentidoHorario = isPar(pastorEnTurno.getDinero());
 		int cantidadVecinos = pastorEnTurno.getDinero() % listaPastores.getTamanno();
 		if (cantidadVecinos == 0) {
-			cantidadVecinos = 1; 
+			cantidadVecinos = 1;
 		}
 
 		JOptionPane.showMessageDialog(view.getFrame(), "Se evaluaron en sentido: "
@@ -122,7 +127,7 @@ public class Controller {
 
 			Pastor pastorTurno = actual.getPastor();
 
-			String estado = String.format("Turno: %s - Dinero:%d Feligreces:%d\nTamañno rueda:%d\nPila vacía:%b",
+			String estado = String.format("Turno: %s - Dinero:%d Feligreces:%d\nTamaño rueda:%d\nPila vacía:%b",
 					pastorTurno.getOficio(), pastorTurno.getDinero(), pastorTurno.getFeligreces(),
 					listaPastores.getTamanno(), pila.estaVacia());
 			JOptionPane.showMessageDialog(view.getFrame(), estado);
@@ -180,7 +185,7 @@ public class Controller {
 
 					listaPastores.agregar(rescatado);
 
-					JOptionPane.showMessageDialog(view.getFrame(), "Rescataste a: " + rescatado.getOficio());
+					JOptionPane.showMessageDialog(view.getFrame(), "Se ha rescatado a: " + rescatado.getOficio());
 
 					actual = designarSiguienteAleatorio(actual);
 					view.getDrawPanel().setPartes(listaPastores.getTamanno());
@@ -209,7 +214,7 @@ public class Controller {
 				Nodo siguienteDelEliminado = objetivo.getSiguiente();
 				listaPastores.eliminar(objetivo);
 
-				JOptionPane.showMessageDialog(view.getFrame(), "Has eliminado a: " + pastorEliminado.getOficio());
+				JOptionPane.showMessageDialog(view.getFrame(), "Se ha eliminado a: " + pastorEliminado.getOficio());
 
 				// Actualizar vista
 				view.getDrawPanel().setPartes(listaPastores.getTamanno());
