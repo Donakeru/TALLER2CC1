@@ -1,7 +1,7 @@
 # TALLER 2 - CIENCIAS DE LA COMPUTACIÓN 1
 
 DANIEL ALEJANDRO CHAVEZ BUSTOS - 20212020109
-ALEJANDRO - 20
+DAIRO ALEJANDRO NESTIEL MUÑOZ - 20231020025
 
 
 ### DESCRIPCIÓN DE LA ACTIVIDAD
@@ -41,36 +41,27 @@ Guárdese, empero, una severa cortesía de vecindad: puede un pastor tener por s
     - El eliminado se envía a una pila de desposeídos (estructura tipo LIFO: el último en entrar será el primero en salir).
 
 4) **Continuidad del juego:**
-    - El pastor que acaba de eliminar a otro designa al siguiente en jugar.
-    - El turno no necesariamente pasa al vecino inmediato, sino que depende de las reglas definidas.
-    - El juego continúa mientras queden pastores en la rueda.
+    - El pastor que acaba de eliminar a otro designa al siguiente en jugar**OK**.
+    - El turno no necesariamente pasa al vecino inmediato, sino que depende de las reglas definidas**OK**.
+    - El juego continúa mientras queden pastores en la rueda **OK**.
 
-5) **Uso de la pila de desposeídos:**
+5) **Regla de compensación de riqueza:**
+    - Si el pastor en turno resulta ser el más pobre de todos los presentes en la rueda, entonces **OK**:
+    - Puede realizar una sola vez en su turno una acción especial **OK**:
+    - Tomar la tercera parte (1/3) de los feligreses y del caudal del pastor más rico **OK**.
+
+6) **Uso de la pila de desposeídos:**
     - Si la pila no está vacía, el pastor en turno tiene dos opciones:
         - Eliminar nuevamente a un vecino (como en la mecánica ya descrita).
-        - Rescatar al pastor que se encuentra en la cima de la pila (el último eliminado).
-    - Si elige rescatarlo, este pastor vuelve a la rueda y recibe:
-    - La mitad exacta de los feligreses del pastor que lo rescató.
-    - La mitad exacta del caudal del pastor que lo rescató.
-    - El rescatado es reincorporado a la lista circular en la posición correspondiente (como un nodo activo).
+        - Rescatar al pastor que se encuentra en la cima de la pila (el último eliminado)**OK**.
+    - Si elige rescatarlo, este pastor vuelve a la rueda y recibe**OK**:
+        - La mitad exacta de los feligreses del pastor que lo rescató**OK**.
+        - La mitad exacta del caudal del pastor que lo rescató**OK**.
+    - El rescatado es reincorporado a la lista circular en la posición correspondiente (como un nodo activo) **OK**.
 
-6) **Regla de compensación de riqueza:**
-    - Si el pastor en turno resulta ser el más pobre de todos los presentes en la rueda, entonces:
-    - Puede realizar una sola vez en su turno una acción especial:
-    - Tomar la tercera parte (1/3) de los feligreses y del caudal del pastor más rico.
-
-7) **Uso de la pila de desposeídos:**
-    - Si la pila no está vacía, el pastor en turno tiene dos opciones:
-        - Eliminar nuevamente a un vecino (como en la mecánica ya descrita).
-        - Rescatar al pastor que se encuentra en la cima de la pila (el último eliminado).
-    - Si elige rescatarlo, este pastor vuelve a la rueda y recibe:
-        - La mitad exacta de los feligreses del pastor que lo rescató.
-        - La mitad exacta del caudal del pastor que lo rescató.
-    - El rescatado es reincorporado a la lista circular en la posición correspondiente (como un nodo activo).
-
-8) **Regla de compensación de riqueza:**
+7) **Regla de compensación de riqueza:**
     - Si el pastor en turno resulta ser el más pobre de todos los presentes en la rueda, entonces:
         - Puede realizar una sola vez en su turno una acción especial:
-            - Tomar la tercera parte (1/3) de los feligreses y del caudal del pastor más rico.
+            - Tomar la tercera parte (1/3) de los feligreses y del caudal del pastor más rico**OK**.
     - Esta acción busca equilibrar la “balanza de la fortuna”.
 

@@ -43,6 +43,7 @@ public class ListaCircular {
     }
 
     public void eliminar(Nodo nodo) {
+    	if (nodo == null) return;
         if (nodo.getSiguiente() == nodo) { 
             cabeza = null;
         } else {
@@ -54,6 +55,7 @@ public class ListaCircular {
         }
         this.tamanno--;
     }
+    
 
     public void mostrar() {
         if (cabeza == null) {

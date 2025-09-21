@@ -24,9 +24,19 @@ public class PilaDesposeidos {
         if (this.cabeza == null) return null;
 
         Pastor pastor = this.cabeza.getPastor();
+        this.cabeza = this.cabeza.getSiguiente(); //mueve el tope de la pila
 
         return pastor;
 
     }
-
+    
+    public Boolean estaVacia() {
+    	return this.cabeza==null;
+    }
+    
+    public Pastor cima() {
+    	return this.cabeza == null ? null : this.cabeza.getPastor();
+    }
+    
+    
 }
