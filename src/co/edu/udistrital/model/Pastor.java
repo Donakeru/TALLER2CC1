@@ -52,6 +52,14 @@ public class Pastor {
 		}
 	}
 
+	public void adicionarDinero(int dinero) {
+		this.dinero+=dinero;
+	}
+
+	public void adicionarFeligreces(int feligreces) {
+		this.feligreces+=feligreces;
+	}
+
 	@Override
 	public String toString() {
 		return "Pastor [oficio=" + oficio + ", dinero=" + dinero + ", feligreces=" + feligreces + "]";

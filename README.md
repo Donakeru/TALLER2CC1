@@ -31,13 +31,13 @@ Guárdese, empero, una severa cortesía de vecindad: puede un pastor tener por s
     - El primer pastor en actuar es aquel con mayor caudal. **OK**
 
 4) **Mecánica del turno:**
-    - El pastor en turno decide (al azar o por regla) mirar hacia la izquierda o hacia la derecha.
-    - Puede contar hasta n vecinos en la dirección elegida (n es un parámetro definido por las reglas del juego).
-    - Entre esos vecinos contados, selecciona al que tenga menos feligreses.
+    - El pastor en turno decide (al azar o por regla) mirar hacia la izquierda o hacia la derecha. **OK**
+    - Puede contar hasta n vecinos en la dirección elegida (n es un parámetro definido por las reglas del juego). **OK**
+    - Entre esos vecinos contados, selecciona al que tenga menos feligreses. **OK**
 
 5) **Eliminación y transferencia:**
-    - El pastor seleccionado es eliminado de la rueda (sale de la lista circular).
-    - Sus feligreses y caudal se transfieren al pastor que lo eliminó.
+    - El pastor seleccionado es eliminado de la rueda (sale de la lista circular). **OK**
+    - Sus feligreses y caudal se transfieren al pastor que lo eliminó. **OK**
     - El eliminado se envía a una pila de desposeídos (estructura tipo LIFO: el último en entrar será el primero en salir).
 
 4) **Continuidad del juego:**

@@ -8,26 +8,10 @@ public class Nodo {
     private Nodo siguiente;
     private Nodo anterior;
 
-    /**
-     * Construye un nodo doblemente enlazado con el Pastor
-     * Las soguientes referencias (siguiente y anterior)
-     * empiezan en null
-     *
-     * @param pastor El dato a almacenar.
-     */
     public Nodo(Pastor pastor) {
         this(pastor, null, null);
     }
 
-    /**
-     * Construye un nodo doblemente enlazado
-     * con el pastor y las referencias
-     * anterior y siguiente especificadas.
-     *
-     * @param pastor El dato a almacenar.
-     * @param anterior El nodo que precede a este nodo.
-     * @param siguiente El nodo que sucede a este nodo.
-     */
     public Nodo(Pastor pastor, Nodo siguiente, Nodo anterior) {
         this.pastor = pastor;
         this.siguiente = siguiente;
