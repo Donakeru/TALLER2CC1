@@ -15,7 +15,7 @@ public class GeneradorPastores {
 
 	}
 	
-	public Pastor generar() {
+	public Pastor generar(String nombre) {
 
 		String oficio = Datos.OFICIOS[rnd.nextInt(Datos.OFICIOS.length)];
 
@@ -29,7 +29,7 @@ public class GeneradorPastores {
 			CANTIDAD_LIMITE_SUPERIOR + 1
 		);
 
-		return new Pastor(oficio, dinero , feligreces);
+		return new Pastor(nombre, oficio, dinero , feligreces);
 	}
 	
 	

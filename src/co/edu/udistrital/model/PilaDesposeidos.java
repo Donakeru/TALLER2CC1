@@ -3,6 +3,7 @@ package co.edu.udistrital.model;
 public class PilaDesposeidos {
     
     private Nodo cabeza;
+    private int tamanno;
 
     public PilaDesposeidos() {
         this.cabeza = null;
@@ -17,6 +18,7 @@ public class PilaDesposeidos {
             nuevoNodo.setSiguiente(this.cabeza);
             this.cabeza = nuevoNodo;
         }
+        this.tamanno++;
     }
 
     public Pastor retirar() {
@@ -25,13 +27,12 @@ public class PilaDesposeidos {
 
         Pastor pastor = this.cabeza.getPastor();
         this.cabeza = this.cabeza.getSiguiente(); //mueve el tope de la pila
-
+        this.tamanno--;
         return pastor;
-
     }
     
     public Boolean estaVacia() {
-    	return this.cabeza==null;
+    	return this.tamanno == 0;
     }
     
     

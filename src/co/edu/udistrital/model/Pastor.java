@@ -2,14 +2,24 @@ package co.edu.udistrital.model;
 
 public class Pastor {
 	
+	private String nombre;
 	private String oficio;
 	private int dinero;
 	private int feligreces;
 	
-	public Pastor(String oficio, int dinero, int feligreces) {
+	public Pastor(String nombre, String oficio, int dinero, int feligreces) {
+		this.nombre = nombre;
 		this.oficio = oficio;
 		this.dinero = dinero;
 		this.feligreces = feligreces;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getNombre() {
+		return nombre;
 	}
 	
 	public String getOficio() {

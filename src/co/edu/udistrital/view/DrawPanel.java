@@ -99,7 +99,11 @@ public class DrawPanel extends JPanel {
 		}
 
 		Pastor pastor = nodo.getPastor();
-		return "<html><b>Oficio:</b> " + pastor.getOficio() + "<br><b>Dinero:</b> " + pastor.getDinero()
-				+ "<br><b>Seguidores:</b> " + pastor.getFeligreces() + "</html>";
+		return "<html><b>Nombre:</b> " + pastor.getNombre()
+        	+ "<br><b>Oficio:</b> " + pastor.getOficio()
+        	+ "<br><b>Dinero:</b> " + pastor.getDinero()
+        	+ "<br><b>Seguidores:</b> " + pastor.getFeligreces()
+        	+ "</html>";
+
 	}
 }

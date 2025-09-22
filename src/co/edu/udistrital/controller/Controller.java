@@ -35,11 +35,10 @@ public class Controller {
 
 	private void generarPastores() {
 		try {
-			listaPastores = new ListaCircular();
 			int cantidadPastores = Integer.parseInt(view.getTextField().getText());
 
 			for (int i = 0; i < cantidadPastores; i++) {
-				listaPastores.agregar(this.generador.generar());
+				listaPastores.agregar(this.generador.generar("Pastor " + i));
 			}
 
 			System.out.println("Lista circular generada:");
@@ -54,6 +53,7 @@ public class Controller {
 	}
 
 	private Nodo buscarNodoConPastorMasRico() {
+
 		Nodo actual = listaPastores.getCabeza();
 		Nodo mejorNodo = actual;
 		actual = actual.getSiguiente();
@@ -128,7 +128,7 @@ public class Controller {
 			Pastor pastorTurno = actual.getPastor();
 
 			String estado = String.format("Turno: %s - Dinero:%d Feligreces:%d\nTamaño rueda:%d\nPila vacía:%b",
-					pastorTurno.getOficio(), pastorTurno.getDinero(), pastorTurno.getFeligreces(),
+					pastorTurno.getNombre(), pastorTurno.getDinero(), pastorTurno.getFeligreces(),
 					listaPastores.getTamanno(), pila.estaVacia());
 			JOptionPane.showMessageDialog(view.getFrame(), estado);
 
@@ -147,8 +147,9 @@ public class Controller {
 							nodoMasRico.getPastor()
 									.setFeligreces(nodoMasRico.getPastor().getFeligreces() - feligresesTomados);
 
-							String informe = "El pastor " + pastorTurno.getOficio()
+							String informe = "El pastor " + pastorTurno.getNombre()
 									+ " era el más pobre y tomó 1/3 de la riqueza y feligreses de "
+									+ nodoMasRico.getPastor().getNombre()
 									+ nodoMasRico.getPastor().getOficio() + ".\n" + "Dinero tomado: " + dineroTomado
 									+ "\n" + "Feligreses tomados: " + feligresesTomados;
 
@@ -185,7 +186,7 @@ public class Controller {
 
 					listaPastores.agregar(rescatado);
 
-					JOptionPane.showMessageDialog(view.getFrame(), "Se ha rescatado a: " + rescatado.getOficio());
+					JOptionPane.showMessageDialog(view.getFrame(), "Se ha rescatado a: " + rescatado.getNombre());
 
 					actual = designarSiguienteAleatorio(actual);
 					view.getDrawPanel().setPartes(listaPastores.getTamanno());
@@ -214,7 +215,7 @@ public class Controller {
 				Nodo siguienteDelEliminado = objetivo.getSiguiente();
 				listaPastores.eliminar(objetivo);
 
-				JOptionPane.showMessageDialog(view.getFrame(), "Se ha eliminado a: " + pastorEliminado.getOficio());
+				JOptionPane.showMessageDialog(view.getFrame(), "Se ha eliminado a: " + pastorEliminado.getNombre());
 
 				// Actualizar vista
 				view.getDrawPanel().setPartes(listaPastores.getTamanno());
@@ -227,7 +228,7 @@ public class Controller {
 			if (listaPastores.getTamanno() == 1) {
 				Nodo ganador = listaPastores.getCabeza();
 				Pastor p = ganador.getPastor();
-				JOptionPane.showMessageDialog(view.getFrame(), "Juego terminado. Ganador: " + p.getOficio() + " Dinero:"
+				JOptionPane.showMessageDialog(view.getFrame(), "Juego terminado. Ganador: " + p.getNombre() + "Oficio: " + p.getOficio() + " Dinero:"
 						+ p.getDinero() + " Feligreces:" + p.getFeligreces());
 			}
 
